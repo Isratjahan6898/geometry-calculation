@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geometry calculation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style/style.css">
+<style>
+    .font-family{
+        font-family: "Inter", sans-serif;;
+    }
+</style>
+</head>
+<body class="font-family">
+    <header class=" mx-[30px] px-[10px]	 mt-[30px] pt-[10px] rounded-s-lg flex justify-between	bg-cyan-200	">
+        <div>
+            <h1 class="font-semibold	text-3xl">Interactive</h1>
+            
+            <p class="text-slate-500	">Geometry Genius </p>
+        </div>
+        <div>
+            <button class="p-[10px] bg-cyan-500	rounded-2xl w-24 text-xl	font-bold		">Blog</button>
+        </div>
+    </header>
+
+    
+
+    <main class="mx-[30px] pt-[50px] pb-[50px] flex flex-col lg:flex-row">
+        <!--card design-->
+       <div class="grow	grid grid-cols-3	">
+
+        <!--triangle-->
+        <div class="card w-[300px] mb-[20px] bg-base-100 shadow-xl">
+            <figure><img src="images/triangle.png" class="p-[40px] h-[150px]" alt="triangle" /></figure>
+            <div class="card-body">
+              <h2 class="text-center font-bold	">Triangle</h2>
+              <p class="text-center font-bold	">Area: 0.5 X b X h</p>
+              <div class="mx-[20px]">
+     
+                <input type="text" name="" class="border border-slate-500 w-[50px]" id="triangle-base">
+                <span>cm</span>
+                <input type="text" name="" id="triangle-height" class="border border-slate-500 w-[50px]">
+                <span>cm</span>
+              </div>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary w-full bg-cyan-400 " onclick="calculationTriangle()">calculation</button>
+              </div>
+            </div>
+          </div>
+
+          <!--rectangle-->
+          <div class="card w-[300px] mb-[20px] bg-base-100 shadow-xl">
+            <figure><img src="images/rectangle.png" class="p-[40px] h-[150px]" alt="rectangle" /></figure>
+            <div class="card-body">
+              <h2 class="text-center font-bold	">Rectangle</h2>
+
+              <p class="text-center font-bold	">Area: w X l</p>
+              <div class="mx-[20px]">
+     
+                <input type="text" name="" class="border border-slate-500 w-[50px]" id="">
+                <span>cm</span>
+                <input type="text" name="" class="border border-slate-500 w-[50px]">
+                <span>cm</span>
+              </div>
+              
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary w-full bg-cyan-400	">calculation</button>
+              </div>
+            </div>
+          </div>
+       <!--parallelogram-->
+       <div class="card w-[300px] mb-[20px] bg-base-100 shadow-xl">
+        <figure><img src="images/parallelogram.png" class="p-[40px] h-[150px]" alt="parallelogram" /></figure>
+        <div class="card-body">
+          <h2 class="text-center font-bold">Parallelogram</h2>
+          <p class="text-center font-bold	">Area:  b X h</p>
+          <div class="mx-[20px]">
+ 
+            <input type="text" name="" class="border border-slate-500 w-[50px]" id="">
+            <span>cm</span>
+            <input type="text" name="" class="border border-slate-500 w-[50px]">
+            <span>cm</span>
+          </div>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary w-full bg-cyan-400	">calculation</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Rhombos-->
+      <div class="card w-[300px] bg-base-100 shadow-xl">
+        <figure><img src="images/rhombus.png" class="p-[40px] h-[150px]" alt="rhombus" /></figure>
+        <div class="card-body">
+          <h2 class="text-center font-bold">Rhombus</h2>
+          <p class="text-center font-bold	">Area: 0.5 X d<sub>1</sub>Xd<sub>2</sub></p>
+          <div class="mx-[20px]">
+ 
+            <input type="text" name="" class="border border-slate-500 w-[50px]" id="">
+            <span>cm</span>
+            <input type="text" name="" class="border border-slate-500 w-[50px]">
+            <span>cm</span>
+          </div>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary w-full bg-cyan-400" onclick="">calculation</button>
+          </div>
+        </div>
+      </div>
+
+      <!--pentagon-->
+      <div class="card w-[300px] bg-base-100 shadow-xl">
+        <figure><img src="images/pentagon.png" class="p-[40px] h-[150px]" alt="pentagon" /></figure>
+        <div class="card-body">
+          <h2 class="text-center font-bold">Pentagon</h2>
+          <p class="text-center font-bold	">Area: 0.5 X p X h</p>
+          <div class="mx-[20px]">
+ 
+            <input type="text" name="" class="border border-slate-500 w-[50px]" id="">
+            <span>cm</span>
+            <input type="text" name="" class="border border-slate-500 w-[50px]">
+            <span>cm</span>
+          </div>
+         
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary w-full bg-cyan-400	">calculation</button>
+          </div>
+        </div>
+      </div>
+      <!--ellipis-->
+      <div class="card w-[300px] bg-base-100 shadow-xl">
+        <figure><img src="images/ellipse.png" class="p-[40px] h-[150px]" alt="ellipse" /></figure>
+        <div class="card-body">
+          <h2 class="text-center font-bold">Ellipse</h2>
+          <p class="text-center font-bold	">Area:3.1416X ab</p>
+          <div class="mx-[20px]">
+ 
+            <input type="text" name="" class="border border-slate-500 w-[50px]" id="">
+            <span>cm</span>
+            <input type="text" name="" class="border border-slate-500 w-[50px]">
+            <span>cm</span>
+          </div>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary w-full bg-cyan-400	">calculation</button>
+          </div>
+        </div>
+      </div>
+
+       </div>
+      <!--calculation-->
+     <div class="grow-0	w-[300px] h-[300px] border border-slate-500	" >
+        <h1 class="text-center">Calcution Area</h1>
+        <h1 id="calculation-area"></h1>
+
+     </div>
+
+    </main>
+    <script src="js/calculation.js"></script>
+    
+</body>
+</html>
